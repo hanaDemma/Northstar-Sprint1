@@ -11,6 +11,7 @@
  */
 
 const { handleOrderStatusQuery, extractOrderId } = require("./order_status");
+const { handleStockAvailabilityQuery, extractProduct } = require("./stock_availability");
 
 const GREETING_KEYWORDS = ["hi", "hello", "hey"];
 
@@ -19,11 +20,17 @@ const ORDER_STATUS_KEYWORDS = [
   "tracking", "shipped", "ship", "arrive", "delivery", "delivered", "order"
 ];
 
+const STOCK_AVAILABILITY_KEYWORDS = [
+  "in stock", "out of stock", "stock availability", "available",
+  "availability", "do you have", "back in stock", "restock", "restocking"
+];
+
 const HELP_MESSAGE =
-  "I can help with order status questions right now — for example:\n" +
+  "I can help with order status or stock availability questions right now — for example:\n" +
   '  - "Where is my order ORD002?"\n' +
   '  - "Has my order shipped yet?"\n' +
-  "Just include your order number or the name on the order.";
+  '  - "Is the Smartphone in stock?"\n' +
+  "Just include your order number, name on the order, or the product you're asking about.";
 
 function detectIntent(text) {
   const lowered = text.toLowerCase().trim();
@@ -41,6 +48,16 @@ function detectIntent(text) {
     return "order_status";
   }
 
+  if (STOCK_AVAILABILITY_KEYWORDS.some(kw => lowered.includes(kw))) {
+    return "stock_availability";
+  }
+
+  // A recognized product name on its own is a strong signal too
+  // (e.g. a follow-up reply naming the item).
+  if (extractProduct(text)) {
+    return "stock_availability";
+  }
+
   return "unknown";
 }
 
@@ -54,6 +71,9 @@ function handleMessage(text, session = { awaiting: null }) {
   if (session.awaiting === "order_identifier") {
     return handleOrderStatusQuery(text, session);
   }
+  if (session.awaiting === "product_name") {
+    return handleStockAvailabilityQuery(text, session);
+  }
 
   const intent = detectIntent(text);
 
@@ -63,6 +83,10 @@ function handleMessage(text, session = { awaiting: null }) {
 
   if (intent === "order_status") {
     return handleOrderStatusQuery(text, session);
+  }
+
+  if (intent === "stock_availability") {
+    return handleStockAvailabilityQuery(text, session);
   }
 
   return { reply: `Sorry, I didn't quite catch that. ${HELP_MESSAGE}`, session };
