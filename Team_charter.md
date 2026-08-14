@@ -2,6 +2,14 @@
 
 This charter sets out how Group 94 will work together for the Northstar Sprint. Every member agrees to follow it once signed below.
 
+## Group 94 Members
+
+- Bob Benjamin — Group leader
+- Hana Demma — Member
+- Chrystabel Young — Member
+- Sharon Mumbi — Member
+- Edna Wanjiru — Member
+
 ## 1.1 Communication Channels
 
 - Primary channel: WhatsApp group — for quick questions and day-to-day coordination.
@@ -14,7 +22,7 @@ This charter sets out how Group 94 will work together for the Northstar Sprint. 
 ## 1.2 Response SLA (Service Level Agreement)
 
 - Reply to a direct message or @mention within 4 hours during agreed working hours.
-- Post a daily status update by a fixed time each day at 8pm EAT.
+- Post a daily status update by a fixed time each day 8pm EAT.
 - If you will miss the SLA — exam, work shift, network issue — say so in the group in advance, not after.
 
 ## 1.3 Task Assignment Rules
@@ -30,6 +38,14 @@ This charter sets out how Group 94 will work together for the Northstar Sprint. 
 - Step 2: If it's still unresolved, raise it in the full team call. No side conversations about it.
 - Step 3: If it's still unresolved after that, the group leader records both positions and the team votes, or a PLP facilitator is brought in.
 - Zero visible activity from a member for 2+ days triggers this process immediately, not at the deadline.
+
+## 1.5 Non-Negotiable Rules
+
+- No board task over 4 hours of work — split it until the Definition of Done is one checkable sentence.
+- Commit/edit format: `<type>: <what changed> -- <why it matters>`. No "wip" or "updates."
+- Board status updates happen the same day as the work — not batched at week's end.
+- 2+ days of zero visible activity from anyone triggers escalation immediately.
+- The Peer Reliability Index is confidential — never shared verbatim between teammates, only in aggregate.
 
 ## Sign-off
 
