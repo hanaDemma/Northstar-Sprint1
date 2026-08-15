@@ -51,10 +51,10 @@ This charter sets out how Group 94 will work together for the Northstar Sprint. 
 
 By signing below, each member confirms they have read this charter and agree to follow it for the Northstar Sprint.
 
-| Name | Signature | Date |
-|---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Name             | Signature | Date      |
+| ---------------- | --------- | --------- |
+| Bob Benjamin     | Signed    | 15/8/2026 |
+| Sharon Mumbi     | Signed    | 15/8/2026 |
+| Edna Wanjiru     | Signed    | 15/8/2026 |
+| Hana Demma       | Signed    | 15/8/2026 |
+| Chrystabel Young | Signed    | 15/8/2026 |
