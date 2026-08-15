@@ -31,6 +31,7 @@ This charter sets out how Group 94 will work together for the Northstar Sprint. 
 - No task takes more than 4 hours of work. Split it if it does.
 - Pick up a new task only after your current one is marked done or blocked on the board.
 - Commit/edit message format: `<type>: <what changed> -- <why it matters>`. "wip" or "updates" alone are not accepted.
+- Branch naming: <firstname>/<short-task-description>
 
 ## 1.4 Conflict Resolution Steps
 
